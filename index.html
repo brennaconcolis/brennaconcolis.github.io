@@ -2,56 +2,105 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Brenna Mei Concolis</title>
 
-  <!-- Google Font: Bebas Neue -->
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome for social icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <style>
+    /* Reset & base */
     body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
       padding: 0 20px;
-      line-height: 1.6;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #333;
+      line-height: 1.5;
+      text-align: center;
+      background: #fafafa;
     }
 
-    h1 {
-      color: #2c3e50;
-    }
-
-    a {
-      color: #1a0dab;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
+    /* Navigation */
     nav {
-      text-align: right;
-      margin-bottom: 20px;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 12px;
     }
 
     nav a {
-      font-family: 'Bebas Neue', sans-serif;
+      font-family: 'Bebas Neue', cursive;
       font-size: 20px;
+      color: #555;
+      text-decoration: none;
+      margin: 0 20px;
       text-transform: uppercase;
-      margin-left: 20px;
-      color: #656280;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: #1a0dab;
+      color: #0077cc;
     }
 
-    img.profile-pic {
-      max-width: 180px;
-      float: left;
-      margin: 0 20px 20px 0;
-      /* No border-radius here — original corners preserv*
+    /* Profile image */
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-top: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Name and university */
+    h1 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 3rem;
+      margin: 20px 0 6px 0;
+      color: #222;
+    }
+
+    h2 {
+      font-weight: 400;
+      color: #777;
+      margin-top: 0;
+      margin-bottom: 25px;
+      font-size: 1.3rem;
+    }
+
+    /* Social icons container */
+    .social-icons {
+      margin-bottom: 30px;
+    }
+
+    .social-icons a {
+      color: #555;
+      font-size: 28px;
+      margin: 0 15px;
+      transition: color 0.3s ease;
+      display: inline-block;
+    }
+
+    .social-icons a:hover {
+      color: #0077cc;
+    }
+
+    /* Bio */
+    .bio {
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.1rem;
+      color: #444;
+      text-align: justify;
+      text-justify: inter-word;
     }
   </style>
 </head>
@@ -64,26 +113,24 @@
     <a href="publications.html">Publications</a>
   </nav>
 
+  <img src="profile.jpg" alt="Brenna Mei Concolis" class="profile-pic" />
+
   <h1>Brenna Mei Concolis</h1>
+  <h2>University of Hamburg</h2>
 
-  <img src="profile.JPG" alt="Brenna Concolis" class="profile-pic" />
+  <div class="social-icons">
+    <a href="mailto:brenna.concolis@hereon.de" title="Email"><i class="fas fa-envelope"></i></a>
+    <a href="https://orcid.org/0000-0002-4949-9426" target="_blank" title="ORCID"><i class="fas fa-id-badge"></i></a>
+    <a href="https://www.linkedin.com/in/brenna-mei-concolis-345248210" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+  </div>
 
-  <p>
-    I am an early-career scientist with an interest in marine extreme events. I am currently doing my PhD in Earth System Sciences at the University of Hamburg. At the same time, I am a doctoral researcher at the Helmholtz-Zentrum Hereon under the Department of Climate Extremes and Impacts.
-  </p>
-
-  <p>
-    <strong>Email:</strong>
-    <a href="mailto:brenna.concolis@hereon.de">brenna.concolis@hereon.de</a>;
-    <a href="mailto:brenna.concolis@studium.uni-hamburg.de">brenna.concolis@studium.uni-hamburg.de</a>
-    <br />
-
-    <strong>LinkedIn:</strong>
-    <a href="https://www.linkedin.com/in/brenna-mei-concolis-345248210" target="_blank">
-      brenna-mei-concolis-345248210
-    </a>
-  </p>
+  <div class="bio">
+    <p>
+      I am an early-career scientist with an interest in marine extreme events, currently pursuing a PhD in Earth System Sciences at the University of Hamburg. At the same time, I am a doctoral researcher at the Helmholtz-Zentrum Hereon within the Department of Climate Extremes and Impacts, where I investigate the occurrence, mechanism, and predictability of marine heatwaves.
+    </p>
+  </div>
 
 </body>
-</html>  
+</html>
+
 
