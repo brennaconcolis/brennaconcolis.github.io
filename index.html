@@ -119,57 +119,38 @@
       max-width: 600px;
       margin: 30px auto 60px auto;
       text-align: left;
-      display: flex;
-      align-items: flex-start;
-      gap: 15px; /* spacing between image and text */
-    }
-    
-    .link-preview img {
-      width: 50px;      /* adjust thumbnail size here */
-      height: 100px;
-      border-radius: 8px;
-      flex-shrink: 0;
-    }
-    
-    .link-preview .preview-text {
-      flex: 1;
-    }
-    
-    .link-preview h3 {
-      margin: 0 0 8px 0;
-      font-size: 1.2rem;
-      color: #222;
-    }
-    
-    .link-preview p {
-      margin: 0;
-      color: #666;
-      font-size: 0.95rem;
     }
     
     .preview-card {
       display: flex;
-      flex-direction: column;
-      gap: 10px;
+      align-items: center;
+      gap: 15px;
       text-decoration: none;
-    }
-    
-    .preview-card img {
-      width: 100%;
+      background-color: #fff;
       border-radius: 10px;
     }
     
+    .preview-card img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+    
     .preview-card h3 {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #0077cc;
       margin: 0;
+      line-height: 1.2;
     }
     
     .preview-description {
       font-size: 1rem;
       color: #444;
-      margin-top: 10px;
+      margin-top: 12px;
     }
+
     
   </style>
 </head>
@@ -195,7 +176,7 @@
     <a href="https://scholar.google.com/citations?user=YZX4vQYAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap" title="Google Scholar"></i></a>
     <a href="https://www.researchgate.net/profile/Brenna-Mei-Concolis" target="_blank"><i class="fab fa-researchgate" title="ResearchGate"></i></a>
   </div>
-
+  
   <div class="bio">
     <p>
       I am an early-career scientist with an interest in marine extreme events, currently pursuing a PhD in Earth System Sciences at the University of Hamburg. At the same time, I am a doctoral researcher at the Helmholtz-Zentrum Hereon within the Department of Climate Extremes and Impacts, where I investigate the occurrence, mechanism, and predictability of marine heatwaves.
@@ -203,18 +184,15 @@
   </div>
 
   <div class="link-preview">
-    <a href="https://zenodo.org/records/14961405?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjY0MTQzZDIxLWJjZTItNDRkYy1iNDA0LTI1ZDViMDdlYTc4MyIsImRhdGEiOnt9LCJyYW5kb20iOiJmOTcyMDY1Y2IxM2U5NmRjZWEyMzczNmZmOWM5YjAzMiJ9.6p94ytKR-dVA0X74imKVfJMySpIZO5gWTq-Ii49dUwHMpwrSNZLrIGIlCvY0k3Q1kCQevgIYtq1hSxjlOLLSCQ" target="_blank">
-      <div class="preview-content">
-        <h3>Zenodo Repository</h3>
-      </div>
-      <div class="preview-card">
-        <img src="zenodo-preview.jpg" alt="Preview Image"> 
-      </div>
+    <a href="https://zenodo.org/records/14961405?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjY0MTQzZDIxLWJjZTItNDRkYy1iNDA0LTI1ZDViMDdlYTc4MyIsImRhdGEiOnt9LCJyYW5kb20iOiJmOTcyMDY1Y2IxM2U5NmRjZWEyMzczNmZmOWM5YjAzMiJ9.6p94ytKR-dVA0X74imKVfJMySpIZO5gWTq-Ii49dUwHMpwrSNZLrIGIlCvY0k3Q1kCQevgIYtq1hSxjlOLLSCQ" target="_blank" class="preview-card">
+      <img src="zenodo-preview.jpg" alt="Preview Image" />
+      <h3>Zenodo Repository</h3>
     </a>
     <p class="preview-description">
       Check out my repository for processed and analyzed ocean data that you may find helpful.
     </p>
   </div>
+
 
 
 </body>
