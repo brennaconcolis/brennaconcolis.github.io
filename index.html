@@ -114,11 +114,37 @@
       text-align: justify;
       text-justify: inter-word;
     }
-
+    
     .link-preview {
       max-width: 600px;
       margin: 30px auto 60px auto;
       text-align: left;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px; /* spacing between image and text */
+    }
+    
+    .link-preview img {
+      width: 120px;      /* adjust thumbnail size here */
+      height: auto;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+    
+    .link-preview .preview-text {
+      flex: 1;
+    }
+    
+    .link-preview h3 {
+      margin: 0 0 8px 0;
+      font-size: 1.2rem;
+      color: #222;
+    }
+    
+    .link-preview p {
+      margin: 0;
+      color: #666;
+      font-size: 0.95rem;
     }
     
     .preview-card {
