@@ -109,6 +109,7 @@
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
+      margin-bottom: 60px;
       font-size: 1.1rem;
       color: #444;
       text-align: justify;
@@ -118,40 +119,40 @@
     .link-preview {
       max-width: 600px;
       margin: 30px auto 60px auto;
-      text-align: left;
     }
     
     .preview-card {
       display: flex;
-      align-items: center;
       gap: 15px;
       text-decoration: none;
-      background-color: #fff;
-      border-radius: 10px;
+      color: inherit;
+      align-items: flex-start;
     }
     
     .preview-card img {
-      width: 60px;
-      height: 60px;
-      object-fit: cover;
-      border-radius: 8px;
+      width: 50px;
+      height: auto;
+      border-radius: 6px;
       flex-shrink: 0;
     }
     
+    .preview-text {
+      display: flex;
+      flex-direction: column;
+    }
+    
     .preview-card h3 {
+      margin: 0 0 5px 0;
       font-size: 1.1rem;
       color: #0077cc;
-      margin: 0;
-      line-height: 1.2;
     }
     
     .preview-description {
       font-size: 0.95rem;
-      color: #666;
-      margin-top: 8px;
+      color: #444;
+      margin: 0;
     }
 
-    
   </style>
 </head>
 <body>
@@ -191,11 +192,13 @@
   
   <div class="link-preview">
     <a href="https://zenodo.org/records/14961405?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjY0MTQzZDIxLWJjZTItNDRkYy1iNDA0LTI1ZDViMDdlYTc4MyIsImRhdGEiOnt9LCJyYW5kb20iOiJmOTcyMDY1Y2IxM2U5NmRjZWEyMzczNmZmOWM5YjAzMiJ9.6p94ytKR-dVA0X74imKVfJMySpIZO5gWTq-Ii49dUwHMpwrSNZLrIGIlCvY0k3Q1kCQevgIYtq1hSxjlOLLSCQ" target="_blank" class="preview-card">
-      <img src="zenodo-preview.jpg" alt="Preview Image" />
-      <h3>Zenodo Repository</h3>
-      <p class="preview-description">
-        A repository containing biological ocean data from CMEMS.
-      </p>
+      <img src="zenodo-preview.jpg" alt="Preview Image">
+      <div class="preview-text">
+        <h3>Zenodo Repository</h3>
+        <p class="preview-description">
+          A repository containing biological ocean data from CMEMS.
+        </p>
+      </div>
     </a>
   </div>
 
