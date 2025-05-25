@@ -114,6 +114,49 @@
       text-align: justify;
       text-justify: inter-word;
     }
+
+    .link-preview {
+      margin-top: 40px;
+      text-align: left;
+    }
+    
+    .preview-card {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      text-decoration: none;
+      background-color: #fff;
+      transition: box-shadow 0.3s;
+    }
+    
+    .preview-card:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .preview-card img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+    }
+    
+    .preview-content {
+      padding: 10px 15px;
+    }
+    
+    .preview-content h3 {
+      margin: 0 0 6px 0;
+      font-size: 1.1rem;
+      color: #0077cc;
+    }
+    
+    .preview-content p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
   </style>
 </head>
 <body>
@@ -144,6 +187,19 @@
       I am an early-career scientist with an interest in marine extreme events, currently pursuing a PhD in Earth System Sciences at the University of Hamburg. At the same time, I am a doctoral researcher at the Helmholtz-Zentrum Hereon within the Department of Climate Extremes and Impacts, where I investigate the occurrence, mechanism, and predictability of marine heatwaves.
     </p>
   </div>
+
+  <div class="link-preview">
+    <a href="https://zenodo.org/records/14961405?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjY0MTQzZDIxLWJjZTItNDRkYy1iNDA0LTI1ZDViMDdlYTc4MyIsImRhdGEiOnt9LCJyYW5kb20iOiJmOTcyMDY1Y2IxM2U5NmRjZWEyMzczNmZmOWM5YjAzMiJ9.6p94ytKR-dVA0X74imKVfJMySpIZO5gWTq-Ii49dUwHMpwrSNZLrIGIlCvY0k3Q1kCQevgIYtq1hSxjlOLLSCQ" target="_blank">
+      <div class="preview-card">
+        <img src="zenodo-preview.jpg" alt="Preview Image">
+        <div class="preview-content">
+          <h3>Zenodo Repository</h3>
+          <p>Check out my repository for processed and analyzed ocean data that may use for your analysis.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
 
 </body>
 </html>
