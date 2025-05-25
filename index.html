@@ -116,47 +116,35 @@
     }
 
     .link-preview {
-      margin-top: 40px;
+      max-width: 600px;
+      margin: 30px auto 60px auto;
       text-align: left;
     }
     
     .preview-card {
       display: flex;
-      align-items: center;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      overflow: hidden;
+      flex-direction: column;
+      gap: 10px;
       text-decoration: none;
-      background-color: #fff;
-      transition: box-shadow 0.3s;
-    }
-    
-    .preview-card:hover {
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
     
     .preview-card img {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
+      width: 100%;
+      border-radius: 10px;
     }
     
-    .preview-content {
-      padding: 10px 15px;
-    }
-    
-    .preview-content h3 {
-      margin: 0 0 6px 0;
-      font-size: 1.1rem;
+    .preview-card h3 {
+      font-size: 1.2rem;
       color: #0077cc;
+      margin: 0;
     }
     
-    .preview-content p {
-      margin: 0;
-      font-size: 0.95rem;
-      color: #555;
+    .preview-description {
+      font-size: 1rem;
+      color: #444;
+      margin-top: 10px;
     }
-
+    
   </style>
 </head>
 <body>
@@ -194,10 +182,12 @@
         <img src="zenodo-preview.jpg" alt="Preview Image">
         <div class="preview-content">
           <h3>Zenodo Repository</h3>
-          <p>Check out my repository for processed and analyzed ocean data that may use for your analysis.</p>
         </div>
       </div>
     </a>
+    <p class="preview-description">
+      Check out my repository for processed and analyzed ocean data that you may find helpful.
+    </p>
   </div>
 
 
