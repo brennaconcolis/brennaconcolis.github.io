@@ -80,7 +80,8 @@
     }
 
     .event-container {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 2fr));
       flex-wrap: wrap;
       justify-content: center; /* This centers the rows */
       gap: 20px; /* spacing between events */
