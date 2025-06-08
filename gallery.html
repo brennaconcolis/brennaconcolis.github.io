@@ -79,10 +79,22 @@
       font-weight: 700;
     }
 
-    
+    .event-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* two events per row */
+      gap: 40px; /* spacing between columns and rows */
+      justify-items: center;
+    }
+
     .event {
-      max-width: 600px;
+      max-width: 100%;
       margin: 40px auto;
+    }
+
+     @media (max-width: 768px) {
+      .event-grid {
+        grid-template-columns: 1fr; /* one per row on small screens */
+      }
     }
 
     .event h2 {
@@ -140,6 +152,7 @@
     .carousel-buttons button:hover {
       background-color: #0077cc;
     }
+    
   </style>
 </head>
 <body>
@@ -158,50 +171,52 @@
     Here are some photos from conferences, trainings, and other academic activities that I've participated in. 
   </p>
 
-
-  <div class="event">
-    <h2>5th IOI/DMCR Training or Regional Ocean Governance</h2>
-    <h3>Phuket, Thailand</h3>
-    <div class="carousel" id="carousel1">
-      <div class="carousel-images">
-        <img src="images/ioi1.jpg" alt="IOI 1" />
-        <img src="images/ioi2.jpg" alt="IOI 2" />
-        <img src="images/ioi3.jpg" alt="IOI 3" />
-        <img src="images/ioi4.jpg" alt="IOI 4" />
-        <img src="images/ioi5.jpg" alt="IOI 5" />
-        <img src="images/ioi6.jpg" alt="IOI 6" />
-        <img src="images/ioi7.jpg" alt="IOI 7" />
-        <img src="images/ioi8.jpg" alt="IOI 8" />
-        <img src="images/ioi9.jpg" alt="IOI 9" />
+  <div class="event-grid">
+    <div class="event">
+      <h2>5th IOI/DMCR Training or Regional Ocean Governance</h2>
+      <h3>Phuket, Thailand</h3>
+      <div class="carousel" id="carousel1">
+        <div class="carousel-images">
+          <img src="images/ioi1.jpg" alt="IOI 1" />
+          <img src="images/ioi2.jpg" alt="IOI 2" />
+          <img src="images/ioi3.jpg" alt="IOI 3" />
+          <img src="images/ioi4.jpg" alt="IOI 4" />
+          <img src="images/ioi5.jpg" alt="IOI 5" />
+          <img src="images/ioi6.jpg" alt="IOI 6" />
+          <img src="images/ioi7.jpg" alt="IOI 7" />
+          <img src="images/ioi8.jpg" alt="IOI 8" />
+          <img src="images/ioi9.jpg" alt="IOI 9" />
+        </div>
+      </div>
+      <div class="carousel-buttons">
+        <button onclick="prevSlide(1)">◀</button>
+        <button onclick="nextSlide(1)">▶</button>
       </div>
     </div>
-    <div class="carousel-buttons">
-      <button onclick="prevSlide(1)">◀</button>
-      <button onclick="nextSlide(1)">▶</button>
+
+    <!-- EVENT 2 -->
+    <div class="event">
+      <h2>International Training on BGC Argo</h2>
+      <h3>Hangzhou, China</h3>
+      <div class="carousel" id="carousel2">
+        <div class="carousel-images">
+          <img src="images/bgc1.jpg" alt="BGC Argo Training" />
+          <img src="images/bgc2.jpg" alt="BGC Argo Training" />
+          <img src="images/bgc3.jpg" alt="BGC Argo Training" />
+          <img src="images/bgc4.jpg" alt="BGC Argo Training" />
+          <img src="images/bgc5.jpg" alt="BGC Argo Training" />
+          <img src="images/bgc6.jpg" alt="BGC Argo Training" />
+          <img src="images/bgc7.jpg" alt="BGC Argo Training" />
+        </div>
+      </div>
+      <div class="carousel-buttons">
+        <button onclick="prevSlide(2)">◀</button>
+        <button onclick="nextSlide(2)">▶</button>
+      </div>
     </div>
   </div>
 
-  <!-- EVENT 2 -->
-  <div class="event">
-    <h2>International Training on BGC Argo</h2>
-    <h3>Hangzhou, China</h3>
-    <div class="carousel" id="carousel2">
-      <div class="carousel-images">
-        <img src="images/bgc1.jpg" alt="BGC Argo Training" />
-        <img src="images/bgc2.jpg" alt="BGC Argo Training" />
-        <img src="images/bgc3.jpg" alt="BGC Argo Training" />
-        <img src="images/bgc4.jpg" alt="BGC Argo Training" />
-        <img src="images/bgc5.jpg" alt="BGC Argo Training" />
-        <img src="images/bgc6.jpg" alt="BGC Argo Training" />
-        <img src="images/bgc7.jpg" alt="BGC Argo Training" />
-      </div>
-    </div>
-    <div class="carousel-buttons">
-      <button onclick="prevSlide(2)">◀</button>
-      <button onclick="nextSlide(2)">▶</button>
-    </div>
-  </div>
-
+  
   <script>
     const positions = {
       1: 0,
