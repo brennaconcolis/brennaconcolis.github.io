@@ -79,11 +79,13 @@
       font-weight: 700;
     }
 
-    .event-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr); /* two events per row */
-      gap: 30px; /* spacing between columns and rows */
-      max-width: 50%;
+    .event-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* This centers the rows */
+      gap: 30px; /* spacing between events */
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
     .event {
@@ -93,11 +95,12 @@
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
+      width: 45%;
     }
 
      @media (max-width: 768px) {
-      .event-grid {
-        grid-template-columns: 1fr; /* one per row on small screens */
+      .event {
+        width: 100%; 
       }
     }
 
@@ -138,6 +141,8 @@
     .carousel-buttons {
       text-align: center;
       margin-top: 10px;
+      margin-bottom: 0;
+      padding-bottom: 0;
     }
 
     .carousel-buttons button {
