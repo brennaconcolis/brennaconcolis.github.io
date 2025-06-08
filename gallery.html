@@ -83,13 +83,13 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr); /* two events per row */
       gap: 30px; /* spacing between columns and rows */
-      max-width: 100%;
+      max-width: 50%;
     }
 
     .event {
-      aspect-ratio: 3 / 2; /* Makes them horizontal rectangles */
+      aspect-ratio: 4 / 3; /* Makes them horizontal rectangles */
       background-color: #f9f9f9;
-      padding: 10px;
+      padding: 5px;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
@@ -105,6 +105,7 @@
     .event h2 {
       font-size: 1rem;
       margin-bottom: 0px;
+      text-align: center;
     }
 
     .event h3 {
@@ -112,6 +113,7 @@
       margin-bottom: 0px;
       margin-top: 0px;
       font-weight: normal;
+      text-align: center;
     }
 
     .carousel {
@@ -178,7 +180,7 @@
 
   <div class="event-grid">
     <div class="event">
-      <h2>5th IOI/DMCR Training or Regional Ocean Governance</h2>
+      <h2>5th IOI/DMCR Regional Training on Ocean Governance</h2>
       <h3>Phuket, Thailand</h3>
       <div class="carousel" id="carousel1">
         <div class="carousel-images">
