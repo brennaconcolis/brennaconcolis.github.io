@@ -189,7 +189,7 @@
     <h1>Gallery</h1>
 
     <p>
-      Here are some photos from conferences, trainings, and other academic activities in which I have participated. 
+      Here are some photos from selected conferences, trainings, and other academic activities in which I have participated. 
     </p>
   </div>
 
@@ -257,6 +257,23 @@
         <button onclick="nextSlide(3)">▶</button>
       </div>
     </div>
+
+    <div class="event">
+      <h2>DAAD 100th Anniversary Meeting</h2>
+      <h3>Berlin, Germany | July 4-6, 2025</h3>
+      <div class="carousel" id="carousel4">
+        <div class="carousel-images">
+          <img src="images/daad1.JPG" alt="DAAD" />
+          <img src="images/daad2.JPG" alt="DAAD" />
+          <img src="images/daad3.JPG" alt="DAAD" />
+          <img src="images/daad4.JPG" alt="DAAD" />
+        </div>
+      </div>
+      <div class="carousel-buttons">
+        <button onclick="prevSlide(4)">◀</button>
+        <button onclick="nextSlide(4)">▶</button>
+      </div>
+    </div>
     
   </div>
 
@@ -265,7 +282,8 @@
     const positions = {
       1: 0,
       2: 0,
-      3: 0
+      3: 0,
+      4: 0
     };
 
     function updateCarousel(id) {
