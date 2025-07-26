@@ -71,8 +71,42 @@
     strong {
       font-weight: 700;
     }
+    
+    .banner-container {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-top: 56.25%; /* 16:9 aspect ratio */
+      overflow: hidden;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    
+    .banner-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gif-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px; /* Small space between GIFs */
+      margin-top: 30px;
+    }
+    
+    .gif-row img {
+      width: 49%;
+      height: auto;
+      border-radius: 4px;
+    }
+
   </style>
 </head>
+  
 <body>
   <nav>
     <a href="index.html">Home</a>
@@ -81,7 +115,10 @@
     <a href="gallery.html">Gallery</a>
   </nav>
 
-  <img src="images/north_sea_severe_2009.png" alt="Research Banner" style="width: 100%; margin-top: 20px; border-radius: 8px;" />
+  <div class="banner-container">
+  <img src="images/north_sea_severe_2009.png" alt="Research Banner" />
+</div>
+
 
   <h2>Research Interests</h2>
   <p>Marine heatwaves and cold spells, climate variability and ocean extremes, ocean-atmosphere interactions, ocean productivity</p>
@@ -119,9 +156,16 @@
   <h2>Current Projects</h2>
   <ul>
     <li>
-      <strong>Analyzing marine heatwaves in the North Sea using reanalysis data</strong><br>
+      <strong>Analyzing marine heatwaves in the North Sea from long historical model data</strong><br>
       Helmholtz-Zentrum Hereon
     </li>
+
+    <div class="gif-row">
+      <img src="images/mhw_1982.gif" alt="GIF 1" />
+      <img src="images/mhw_2024.gif" alt="GIF 2" />
+    </div>
+
+
     <li>
       <strong>Using machine learning techniques for forecasting marine heatwaves</strong><br>
       Helmholtz-Zentrum Hereon
