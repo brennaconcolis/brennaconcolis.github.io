@@ -79,6 +79,46 @@
       font-weight: 700;
     }
 
+    .section-row {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 30px;
+    }
+    
+    .section-title {
+      flex: 0 0 180px; /* Fixed width */
+      font-weight: bold;
+      font-size: 18px;
+      color: #2c3e50;
+      text-transform: uppercase;
+    }
+    
+    .section-content {
+      flex: 1;
+      padding-left: 20px;
+    }
+    
+    .section-content ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    
+    .section-content li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+    
+    @media (max-width: 600px) {
+      .section-row {
+        flex-direction: column;
+      }
+      
+      .section-title {
+        margin-bottom: 10px;
+      }
+    }
+
     .content {
       max-width: 1000px;
       margin: 0 auto 40px auto;
@@ -189,25 +229,30 @@
     </p>
   </div>
 
-  
-  <div class="event-container">
 
-    <div class="event">
-      <h2>DAAD 100th Anniversary Meeting</h2>
-      <h3>Berlin, Germany | July 4-6, 2025</h3>
-      <div class="carousel" id="carousel1">
-        <div class="carousel-images">
-          <img src="images/daad2.JPG" alt="DAAD" />
-          <img src="images/daad1.JPG" alt="DAAD" />
-          <img src="images/daad3.JPG" alt="DAAD" />
-          <img src="images/daad4.JPG" alt="DAAD" />
+  <div class="section-row">
+  <div class="section-title">Presentations</div>
+  <div class="section-content">
+
+    <div class="event-container">
+      <div class="event">
+        <h2>DAAD 100th Anniversary Meeting</h2>
+        <h3>Berlin, Germany | July 4-6, 2025</h3>
+        <div class="carousel" id="carousel1">
+          <div class="carousel-images">
+            <img src="images/daad2.JPG" alt="DAAD" />
+            <img src="images/daad1.JPG" alt="DAAD" />
+            <img src="images/daad3.JPG" alt="DAAD" />
+            <img src="images/daad4.JPG" alt="DAAD" />
+          </div>
+        </div>
+        <div class="carousel-buttons">
+          <button onclick="prevSlide(1)">◀</button>
+          <button onclick="nextSlide(1)">▶</button>
         </div>
       </div>
-      <div class="carousel-buttons">
-        <button onclick="prevSlide(1)">◀</button>
-        <button onclick="nextSlide(1)">▶</button>
-      </div>
     </div>
+ 
     
     <div class="event">
       <h2>5th IOI/DMCR Regional Training on Ocean Governance</h2>
@@ -275,6 +320,8 @@
 
     
   </div>
+  </div>
+</div>
 
   
   <script>
