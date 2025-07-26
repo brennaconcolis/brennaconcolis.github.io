@@ -72,23 +72,20 @@
       font-weight: 700;
     }
     
-    .banner-container {
-      position: relative;
-      width: 100%;
-      height: 0;
-      padding-top: 56.25%; /* 16:9 aspect ratio */
-      overflow: hidden;
-      border-radius: 0px;
-      margin-top: 20px;
+    .intro-section {
+      display: flex;
+      align-items: center;
+      margin-top: 40px;
+      gap: 20px;
     }
     
-    .banner-container img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .intro-image {
+      width: 200px; /* adjust as needed */
+      height: auto;
+    }
+    
+    .intro-text {
+      flex: 1;
     }
 
     .gif-row {
@@ -167,8 +164,12 @@
     <a href="gallery.html">Gallery</a>
   </nav>
 
-  <div class="banner-container">
-  <img src="images/north_sea_severe_2009.png" alt="Research Banner" />
+  <div class="intro-section">
+  <img src="images/your-image.jpg" alt="Intro Image" class="intro-image" />
+  <div class="intro-text">
+    <h2>Severe Marine Heatwaves in the North Sea in 2009</h2>
+    <p></p>
+  </div>
 </div>
 
 
