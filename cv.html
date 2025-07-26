@@ -72,8 +72,50 @@
     strong {
       font-weight: 700;
     }
+
+    .section-row {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 30px;
+    }
+    
+    .section-title {
+      flex: 0 0 180px; /* Fixed width */
+      font-weight: bold;
+      font-size: 18px;
+      color: #2c3e50;
+      text-transform: uppercase;
+    }
+    
+    .section-content {
+      flex: 1;
+      padding-left: 20px;
+    }
+    
+    .section-content ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    
+    .section-content li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+    
+    @media (max-width: 600px) {
+      .section-row {
+        flex-direction: column;
+      }
+      
+      .section-title {
+        margin-bottom: 10px;
+      }
+    }
+
     
   </style>
+  
 </head>
 <body>
   <nav>
@@ -84,14 +126,17 @@
     <a href="gallery.html">Gallery</a>
   </nav>
 
-  <h1>Curriculum Vitae</h1>
+  <div class="section-row">
+  <div class="section-title">Education</div>
+  <div class="section-content">
+    <ul>
+      <li><strong>Dr. rer. nat. in Earth System Sciences</strong><br>University of Hamburg (Ongoing)</li>
+      <li><strong>MSc in Ocean Sciences</strong><br>University of the Philippines Visayas</li>
+      <li><strong>BSc in Fisheries</strong><br>Mindanao State University - General Santos</li>
+    </ul>
+  </div>
+</div>
 
-  <h2>Education</h2>
-  <ul>
-    <li><strong>Dr. rer. nat. in Earth System Sciences</strong> – University of Hamburg (Ongoing)</li>
-    <li><strong>MSc in Ocean Sciences</strong> – University of the Philippines Visayas</li>
-    <li><strong>BSc in Fisheries</strong> – Mindanao State University - General Santos</li>
-  </ul>
 
   <h2>Professional Experience</h2>
   <ul>
