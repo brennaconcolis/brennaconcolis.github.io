@@ -117,6 +117,45 @@
       text-align: center;
     }
 
+    .section-row {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 30px;
+    }
+    
+    .section-title {
+      flex: 0 0 180px; /* Fixed width */
+      font-weight: bold;
+      font-size: 22px;
+      color: #2c3e50;
+    }
+    
+    .section-content {
+      flex: 1;
+      padding-left: 20px;
+    }
+    
+    .section-content ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    
+    .section-content li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+    
+    @media (max-width: 600px) {
+      .section-row {
+        flex-direction: column;
+      }
+      
+      .section-title {
+        margin-bottom: 10px;
+      }
+    }
+
   </style>
 </head>
   
@@ -136,70 +175,81 @@
   <h2>Research Interests</h2>
   <p>Marine heatwaves and cold spells, climate variability and ocean extremes, ocean-atmosphere interactions, ocean productivity</p>
   
-  <h2>Publications</h2>
-    <li>
+  <div class="section-row">
+  <div class="section-title">Publications</div>
+  <div class="section-content">
+    <ul>
+      <li>
       <strong>Concolis BMM</strong>. 2025.
       High-resolution Reanalysis Biological Ocean Data from the Copernicus Marine Service Information for Philippine Marine Research.
       <em>Data in Brief</em>. <a href="https://doi.org/10.1016/j.dib.2025.111913" target="_blank">DOI</a>
-    </li>
-    <li>
+      </li>
+      <li>
       <strong>Concolis BMM</strong>. 2025. Empirical Orthogonal Functions of Seasonal and Interannual Net Primary Productivity in the Celebes Sea in the Last 26 Years and Some Notes on Their Association with Climate Oscillations.
       <a href="https://ssrn.com/abstract=5135466" target="_blank">SSRN</a> |
       <a href="http://dx.doi.org/10.2139/ssrn.5135466" target="_blank">DOI</a>
-    </li>
-    <li>
+      </li>
+      <li>
       Quilestino-Olario R, <strong>Concolis BMM</strong>, Atup DP, Cortes A, Yñiguez AT, Edullantes B. 2023.
       Co-occurrence of a marine heatwave and a reported tomato jellyfish bloom in March 2020 at El Nido, Palawan, Philippines.
       <em>Plankton and Benthos Research</em>, 18(2): 93–105. <a href="https://doi.org/10.3800/pbr.18.93" target="_blank">DOI</a>
-    </li>
-    <li>
+      </li>
+      <li>
       Edullantes B, <strong>Concolis BMM</strong>, Quilestino-Olario R, Atup DP, Cortes A, Yñiguez AT. 2023.
       Characteristics of Marine Heatwaves in the Philippines.
       <em>Regional Studies in Marine Science</em>, 62: 102934. <a href="https://doi.org/10.1016/j.rsma.2023.102934" target="_blank">DOI</a>
-    </li>
-    <li>
+      </li>
+      <li>
       Edullantes B, <strong>Concolis BMM</strong>, Quilestino-Olario R, Atup DPD, Cortes A, Yñiguez AT. 2022.
       Marine Heatwaves and Their Impacts: Research Perspectives in the Philippines.
       <em>Philippine Journal of Science</em>, 151(5): <a href="https://www.researchgate.net/profile/Aletta-Yniguez/publication/367579541_Marine_Heatwaves_and_their_Impacts_Research_Perspectives_in_the_Philippines/links/63e3539ddea6121757908587/Marine-Heatwaves-and-their-Impacts-Research-Perspectives-in-the-Philippines.pdf" target="_blank">1873–1880</a>.
-    </li>
+      </li>
+    </ul>
+  </div>
+</div>
 
 
-
-  
-  <h2>Current Projects</h2>
-  <ul>
-    <li>
+  <div class="section-row">
+  <div class="section-title">Current Projects</div>
+  <div class="section-content">
+    <ul>
+      <li>
       <strong>Analyzing marine heatwaves in the North Sea from long historical model data</strong><br>
       Helmholtz-Zentrum Hereon
-    </li>
+      </li>
 
-    <div class="gif-row">
-      <img src="images/mhw_1982.gif" alt="GIF 1" />
-      <img src="images/mhw_2024.gif" alt="GIF 2" /><br>
-    </div>
+      <div class="gif-row">
+        <img src="images/mhw_1982.gif" alt="GIF 1" />
+        <img src="images/mhw_2024.gif" alt="GIF 2" /><br>
+      </div>
 
-    <p style="text-align: center; margin-top: 10px;"><em>Comparison of marine heatwaves occupancy in 1982 (left) and 2024 (right)</em>.</p>
+      <p style="text-align: center; margin-top: 10px;"><em>Comparison of marine heatwaves occupancy in 1982 (left) and 2024 (right)</em>.</p>
 
 
-    <li>
-      <strong>Using machine learning techniques for forecasting marine heatwaves</strong><br>
+      <li>
+      <strong>Predicting marine heatwaves in the North Sea and Western Tropical Pacific using machine learning techniques</strong><br>
       Helmholtz-Zentrum Hereon
-    </li>
-  </ul>
+      </li>
+    </ul>
+  </div>
+</div>
 
-  <h2>Previous Projects</h2>
-  <ul>
-    <li>
+  <div class="section-row">
+  <div class="section-title">Previous Projects</div>
+  <div class="section-content">
+    <ul>
+      <li>
       <strong>Survey of Heatwaves in the Philippines Seas</strong><br>
       Science Research Specialist<br>
       University of the Philippines Cebu (Funded by DOST-PCIEERD)
-    </li>
-    <li>
+      </li>
+      <li>
       <strong>The Dynamics of Water Circulation off Miagao Coast, Iloilo, During the Northeast Monsoon</strong><br>
       University of the Philippines Visayas (Funded by DOST-ASTHRDP and DOST-PCAARRD)
-    </li>
-    
-  </ul>
+      </li>
+    </ul>
+  </div>
+</div>
 
 
   
