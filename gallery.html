@@ -5,14 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery – Brenna Mei Concolis</title>
 
-  <!-- Google Fonts: Bebas Neue + Open Sans -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
 
   <style>
     body {
       font-family: 'Open Sans', sans-serif;
-      font-weight: 400;
       margin: 40px auto;
       padding: 0 20px;
       line-height: 1.6;
@@ -24,7 +23,7 @@
     nav {
       text-align: center;
       margin-top: 40px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       border-bottom: 2px solid #ccc;
       padding-bottom: 12px;
     }
@@ -35,7 +34,6 @@
       color: #555;
       text-decoration: none;
       margin: 0 20px;
-      text-align: center;
       text-transform: uppercase;
       letter-spacing: 1px;
       transition: color 0.3s ease;
@@ -43,38 +41,42 @@
 
     nav a:hover {
       color: #0077cc;
-      text-decoration: none;
     }
 
     h1 {
       color: #2c3e50;
       font-size: 32px;
       text-align: center;
+      margin-bottom: 20px;
     }
 
     p {
       text-align: center;
-      max-width: 1000px;
-      margin: 0 auto;
+      max-width: 800px;
+      margin: 0 auto 40px auto;
     }
 
-    .content {
-      max-width: 1000px;
-      margin: 0 auto 40px auto;
-      text-align: center;
+    /* Gallery grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .carousel-wrapper {
       position: relative;
-      max-width: 1000px;
-      margin: 0 auto 50px auto;
+      overflow: hidden;
+      background: #000;
+      border-radius: 12px;
     }
 
-    /* Text overlay */
+    /* Overlay text */
     .carousel-text {
       position: absolute;
-      top: 15px;
-      left: 15px;
+      top: 12px;
+      left: 12px;
       color: white;
       text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
       z-index: 2;
@@ -82,57 +84,47 @@
 
     .carousel-text h2 {
       margin: 0;
-      font-size: 1.2rem;
+      font-size: 1rem;
       font-weight: bold;
     }
 
     .carousel-text h3 {
       margin: 3px 0 0 0;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       font-weight: normal;
     }
 
+    /* Carousel images */
     .carousel {
-      position: relative;
+      width: 100%;
       overflow: hidden;
     }
 
     .carousel-images {
       display: flex;
-      transition: transform 0.4s ease;
+      transition: transform 0.5s ease;
       width: 100%;
     }
 
     .carousel-images img {
-      height: 350px;
+      width: 100%;
+      height: 220px;
       object-fit: cover;
       flex-shrink: 0;
-      width: 100%;
     }
 
-    .carousel-buttons {
-      text-align: center;
-      margin-top: 10px;
+    /* Hide carousel by default, show only when hovered */
+    .carousel-wrapper .carousel-images img:not(:first-child) {
+      display: none;
     }
 
-    .carousel-buttons button {
-      width: 30px;
-      height: 30px;
-      font-size: 1rem;
-      line-height: 1;
-      margin: 0 8px;
-      border: none;
-      color: #0077cc;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: none;
+    .carousel-wrapper:hover .carousel-images img {
+      display: block;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
       .carousel-images img {
-        height: 220px;
+        height: 180px;
       }
     }
   </style>
@@ -148,127 +140,114 @@
     </nav>
 
     <h1>Gallery</h1>
-    <p>
-      Here are some photos from selected conferences, trainings, and other academic activities in which I have participated. 
-    </p>
+    <p>Here are some photos from selected conferences, trainings, and other academic activities in which I have participated.</p>
   </div>
 
-  <!-- DAAD -->
-  <div class="carousel-wrapper">
-    <div class="carousel-text">
-      <h2>DAAD 100th Anniversary Meeting</h2>
-      <h3>Berlin, Germany | July 4-6, 2025</h3>
-    </div>
-    <div class="carousel" id="carousel1">
-      <div class="carousel-images">
-        <img src="images/daad2.JPG" alt="DAAD group photo" />
-        <img src="images/daad1.JPG" alt="DAAD meeting" />
-        <img src="images/daad3.JPG" alt="DAAD conference hall" />
-        <img src="images/daad4.JPG" alt="DAAD networking" />
-      </div>
-    </div>
-    <div class="carousel-buttons">
-      <button onclick="prevSlide(1)" aria-label="Previous slide">◀</button>
-      <button onclick="nextSlide(1)" aria-label="Next slide">▶</button>
-    </div>
-  </div>
+  <div class="gallery">
 
-  <!-- GHRSST -->
-  <div class="carousel-wrapper">
-    <div class="carousel-text">
-      <h2>24th International SST Users' Symposium</h2>
-      <h3>Ahmedabad, India | October 16-20, 2023</h3>
-    </div>
-    <div class="carousel" id="carousel4">
-      <div class="carousel-images">
-        <img src="images/ghrsst1.jpg" alt="GHRSST group photo" />
-        <img src="images/ghrsst2.jpg" alt="GHRSST panel" />
-        <img src="images/ghrsst3.jpg" alt="GHRSST presentation" />
-        <img src="images/ghrsst6.jpg" alt="GHRSST networking" />
-        <img src="images/ghrsst8.jpg" alt="GHRSST closing session" />
+    <!-- DAAD -->
+    <div class="carousel-wrapper" id="carousel1">
+      <div class="carousel-text">
+        <h2>DAAD 100th Anniversary Meeting</h2>
+        <h3>Berlin, Germany | July 4-6, 2025</h3>
+      </div>
+      <div class="carousel">
+        <div class="carousel-images">
+          <img src="images/daad2.JPG" alt="DAAD group photo" />
+          <img src="images/daad1.JPG" alt="DAAD meeting" />
+          <img src="images/daad3.JPG" alt="DAAD conference hall" />
+          <img src="images/daad4.JPG" alt="DAAD networking" />
+        </div>
       </div>
     </div>
-    <div class="carousel-buttons">
-      <button onclick="prevSlide(4)" aria-label="Previous slide">◀</button>
-      <button onclick="nextSlide(4)" aria-label="Next slide">▶</button>
-    </div>
-  </div>
 
-  <!-- IOI -->
-  <div class="carousel-wrapper">
-    <div class="carousel-text">
-      <h2>5th IOI/DMCR Regional Training on Ocean Governance</h2>
-      <h3>Phuket, Thailand | July 1-27, 2024</h3>
-    </div>
-    <div class="carousel" id="carousel2">
-      <div class="carousel-images">
-        <img src="images/ioi1.jpg" alt="IOI training group photo" />
-        <img src="images/ioi2.jpg" alt="IOI workshop" />
-        <img src="images/ioi3.jpg" alt="IOI lecture" />
-        <img src="images/ioi4.jpg" alt="IOI fieldwork" />
-        <img src="images/ioi5.jpg" alt="IOI event" />
-        <img src="images/ioi7.jpg" alt="IOI participants" />
-        <img src="images/ioi8.jpg" alt="IOI panel discussion" />
-        <img src="images/ioi9.jpg" alt="IOI ceremony" />
-        <img src="images/ioi10.jpg" alt="IOI team photo" />
-        <img src="images/ioi11.jpg" alt="IOI group activity" />
-        <img src="images/ioi12.jpg" alt="IOI collaboration" />
-        <img src="images/ioi13.jpg" alt="IOI closing session" />
+    <!-- GHRSST -->
+    <div class="carousel-wrapper" id="carousel4">
+      <div class="carousel-text">
+        <h2>24th International SST Users' Symposium</h2>
+        <h3>Ahmedabad, India | October 16-20, 2023</h3>
+      </div>
+      <div class="carousel">
+        <div class="carousel-images">
+          <img src="images/ghrsst1.jpg" alt="GHRSST group photo" />
+          <img src="images/ghrsst2.jpg" alt="GHRSST panel" />
+          <img src="images/ghrsst3.jpg" alt="GHRSST presentation" />
+          <img src="images/ghrsst6.jpg" alt="GHRSST networking" />
+          <img src="images/ghrsst8.jpg" alt="GHRSST closing session" />
+        </div>
       </div>
     </div>
-    <div class="carousel-buttons">
-      <button onclick="prevSlide(2)" aria-label="Previous slide">◀</button>
-      <button onclick="nextSlide(2)" aria-label="Next slide">▶</button>
-    </div>
-  </div>
 
-  <!-- BGC Argo -->
-  <div class="carousel-wrapper">
-    <div class="carousel-text">
-      <h2>International Training on Principles and Applications of BGC Argo</h2>
-      <h3>Hangzhou, China | November 15-22, 2023</h3>
-    </div>
-    <div class="carousel" id="carousel3">
-      <div class="carousel-images">
-        <img src="images/bgc1.jpg" alt="BGC Argo group photo" />
-        <img src="images/bgc2.jpg" alt="BGC lecture" />
-        <img src="images/bgc3.jpg" alt="BGC lab session" />
-        <img src="images/bgc4.jpg" alt="BGC fieldwork" />
-        <img src="images/bgc5.jpg" alt="BGC panel" />
-        <img src="images/bgc6.jpg" alt="BGC collaboration" />
-        <img src="images/bgc7.jpg" alt="BGC networking" />
+    <!-- IOI -->
+    <div class="carousel-wrapper" id="carousel2">
+      <div class="carousel-text">
+        <h2>5th IOI/DMCR Regional Training on Ocean Governance</h2>
+        <h3>Phuket, Thailand | July 1-27, 2024</h3>
+      </div>
+      <div class="carousel">
+        <div class="carousel-images">
+          <img src="images/ioi1.jpg" alt="IOI training group photo" />
+          <img src="images/ioi2.jpg" alt="IOI workshop" />
+          <img src="images/ioi3.jpg" alt="IOI lecture" />
+          <img src="images/ioi4.jpg" alt="IOI fieldwork" />
+          <img src="images/ioi5.jpg" alt="IOI event" />
+        </div>
       </div>
     </div>
-    <div class="carousel-buttons">
-      <button onclick="prevSlide(3)" aria-label="Previous slide">◀</button>
-      <button onclick="nextSlide(3)" aria-label="Next slide">▶</button>
+
+    <!-- BGC Argo -->
+    <div class="carousel-wrapper" id="carousel3">
+      <div class="carousel-text">
+        <h2>International Training on Principles and Applications of BGC Argo</h2>
+        <h3>Hangzhou, China | November 15-22, 2023</h3>
+      </div>
+      <div class="carousel">
+        <div class="carousel-images">
+          <img src="images/bgc1.jpg" alt="BGC Argo group photo" />
+          <img src="images/bgc2.jpg" alt="BGC lecture" />
+          <img src="images/bgc3.jpg" alt="BGC lab session" />
+          <img src="images/bgc4.jpg" alt="BGC fieldwork" />
+          <img src="images/bgc5.jpg" alt="BGC panel" />
+        </div>
+      </div>
     </div>
+
   </div>
 
   <br><br>
   <p style="text-align: center;">&copy; 2025 Brenna Mei Concolis. All rights reserved.</p>
 
   <script>
-    const positions = {1:0,2:0,3:0,4:0};
+    // Auto-slideshow logic
+    const carousels = document.querySelectorAll('.carousel-wrapper');
 
-    function updateCarousel(id) {
-      const carousel = document.querySelector(`#carousel${id} .carousel-images`);
-      carousel.style.transform = `translateX(-${positions[id] * 100}%)`;
-    }
+    carousels.forEach((wrapper, idx) => {
+      const images = wrapper.querySelectorAll('.carousel-images img');
+      let index = 0;
 
-    function nextSlide(id) {
-      const carousel = document.querySelector(`#carousel${id} .carousel-images`);
-      const count = carousel.children.length;
-      positions[id] = (positions[id] + 1) % count;
-      updateCarousel(id);
-    }
+      function showSlide() {
+        images.forEach((img, i) => {
+          img.style.display = i === index ? 'block' : 'none';
+        });
+      }
 
-    function prevSlide(id) {
-      const carousel = document.querySelector(`#carousel${id} .carousel-images`);
-      const count = carousel.children.length;
-      positions[id] = (positions[id] - 1 + count) % count;
-      updateCarousel(id);
-    }
+      let interval;
+
+      wrapper.addEventListener('mouseenter', () => {
+        interval = setInterval(() => {
+          index = (index + 1) % images.length;
+          showSlide();
+        }, 2000); // change every 2s
+      });
+
+      wrapper.addEventListener('mouseleave', () => {
+        clearInterval(interval);
+        index = 0;
+        showSlide(); // reset to first image
+      });
+
+      showSlide();
+    });
   </script>
 </body>
 </html>
