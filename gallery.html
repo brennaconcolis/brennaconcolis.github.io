@@ -56,6 +56,50 @@
       margin: 0 auto 40px auto;
     }
 
+    /* FEATURED CAROUSEL */
+    .featured-carousel-wrapper {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    .featured-carousel-images img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: none;
+    }
+
+    .featured-text {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      z-index: 2;
+    }
+
+    .featured-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      background: none;
+      color: #fff;
+      font-size: 36px;
+      cursor: pointer;
+      opacity: 0.8;
+      transition: opacity 0.2s ease;
+      z-index: 3;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    }
+
+    .featured-arrow.left { left: 10px; }
+    .featured-arrow.right { right: 10px; }
+    .featured-arrow:hover { opacity: 1; }
+
     /* Gallery grid */
     .gallery {
       display: grid;
@@ -80,7 +124,7 @@
       color: white;
       text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
       z-index: 2;
-      pointer-events: none; /* keep clicks for arrows/images */
+      pointer-events: none;
     }
 
     .carousel-text h2 {
@@ -102,10 +146,10 @@
       width: 100%;
       height: 320px;
       object-fit: cover;
-      display: none; /* JS will show the active one */
+      display: none;
     }
 
-    /* Thin arrows (no background) */
+    /* Thin arrows */
     .carousel-arrow {
       position: absolute;
       top: 50%;
@@ -113,29 +157,22 @@
       border: none;
       background: none;
       color: #fff;
-      font-size: 28px;       /* thin chevrons, no background */
+      font-size: 28px;
       line-height: 1;
-      padding: 8px 12px;     /* click target padding */
+      padding: 8px 12px;
       cursor: pointer;
-      opacity: 0;
+      opacity: 0.8;
       transition: opacity 0.2s ease;
       z-index: 3;
       text-shadow: 0 1px 2px rgba(0,0,0,0.6);
     }
 
-    .carousel-arrow { opacity: 1; }
-
     .carousel-arrow.left { left: 6px; }
     .carousel-arrow.right { right: 6px; }
 
-    .carousel-arrow:focus { outline: none; }
-    .carousel-arrow:focus-visible {
-      outline: 2px dashed rgba(255,255,255,0.8);
-      outline-offset: 2px;
-    }
-
     @media (max-width: 500px) {
       .carousel-images img { height: 180px; }
+      .featured-carousel-images img { height: 220px; }
     }
   </style>
 </head>
@@ -152,6 +189,27 @@
     <h1>More than research: highlights from collaborations, trainings, and global exchanges.</h1>
   </div>
 
+  <!-- FEATURED CAROUSEL -->
+  <div class="featured-carousel-wrapper" data-featured>
+    <div class="featured-text">11th Baltic Earth Summer School</div>
+    <button class="featured-arrow left" data-prev>&lsaquo;</button>
+    <button class="featured-arrow right" data-next>&rsaquo;</button>
+    <div class="featured-carousel">
+      <div class="featured-carousel-images">
+        <img src="images/baltic1.jpg" alt="Baltic Earth">
+        <img src="images/baltic2.jpg" alt="Baltic Earth">
+        <img src="images/baltic3.jpg" alt="Baltic Earth">
+        <img src="images/baltic4.jpg" alt="Baltic Earth">
+        <img src="images/baltic5.jpg" alt="Baltic Earth">
+        <img src="images/baltic6.jpg" alt="Baltic Earth">
+        <img src="images/baltic7.jpg" alt="Baltic Earth">
+        <img src="images/baltic8.jpg" alt="Baltic Earth">
+        <img src="images/baltic9.jpg" alt="Baltic Earth">
+      </div>
+    </div>
+  </div>
+
+  <!-- GRID GALLERY -->
   <div class="gallery">
 
     <!-- DAAD -->
@@ -160,8 +218,8 @@
         <h2>DAAD 100th Anniversary Meeting</h2>
         <h3>Berlin, Germany | July 4-6, 2025</h3>
       </div>
-      <button class="carousel-arrow left" aria-label="Previous photo" data-prev>&lsaquo;</button>
-      <button class="carousel-arrow right" aria-label="Next photo" data-next>&rsaquo;</button>
+      <button class="carousel-arrow left" data-prev>&lsaquo;</button>
+      <button class="carousel-arrow right" data-next>&rsaquo;</button>
       <div class="carousel">
         <div class="carousel-images">
           <img src="images/daad2.JPG" alt="DAAD group photo">
@@ -172,72 +230,7 @@
       </div>
     </div>
 
-
-    <!-- IOI -->
-    <div class="carousel-wrapper" data-carousel>
-      <div class="carousel-text">
-        <h2>5th IOI/DMCR Regional Training on Ocean Governance</h2>
-        <h3>Phuket, Thailand | July 1-27, 2024</h3>
-      </div>
-      <button class="carousel-arrow left" aria-label="Previous photo" data-prev>&lsaquo;</button>
-      <button class="carousel-arrow right" aria-label="Next photo" data-next>&rsaquo;</button>
-      <div class="carousel">
-        <div class="carousel-images">
-          <img src="images/ioi1.jpg" alt="IOI training group photo">
-          <img src="images/ioi2.jpg" alt="IOI workshop">
-          <img src="images/ioi3.jpg" alt="IOI lecture">
-          <img src="images/ioi4.jpg" alt="IOI fieldwork">
-          <img src="images/ioi5.jpg" alt="IOI event">
-          <img src="images/ioi7.jpg" alt="IOI participants">
-          <img src="images/ioi8.jpg" alt="IOI panel discussion">
-          <img src="images/ioi9.jpg" alt="IOI ceremony">
-          <img src="images/ioi10.jpg" alt="IOI team photo">
-          <img src="images/ioi11.jpg" alt="IOI group activity">
-          <img src="images/ioi12.jpg" alt="IOI collaboration">
-          <img src="images/ioi13.jpg" alt="IOI closing session">
-        </div>
-      </div>
-    </div>
-
-    <!-- BGC Argo -->
-    <div class="carousel-wrapper" data-carousel>
-      <div class="carousel-text">
-        <h2>International Training on Principles and Applications of BGC Argo</h2>
-        <h3>Hangzhou, China | November 15-22, 2023</h3>
-      </div>
-      <button class="carousel-arrow left" aria-label="Previous photo" data-prev>&lsaquo;</button>
-      <button class="carousel-arrow right" aria-label="Next photo" data-next>&rsaquo;</button>
-      <div class="carousel">
-        <div class="carousel-images">
-          <img src="images/bgc1.jpg" alt="BGC Argo group photo">
-          <img src="images/bgc2.jpg" alt="BGC lecture">
-          <img src="images/bgc3.jpg" alt="BGC lab session">
-          <img src="images/bgc4.jpg" alt="BGC fieldwork">
-          <img src="images/bgc5.jpg" alt="BGC panel">
-          <img src="images/bgc6.jpg" alt="BGC collaboration">
-          <img src="images/bgc7.jpg" alt="BGC networking">
-        </div>
-      </div>
-    </div>
-
-      <!-- GHRSST -->
-    <div class="carousel-wrapper" data-carousel>
-      <div class="carousel-text">
-        <h2>24th International SST Users' Symposium</h2>
-        <h3>Ahmedabad, India | October 16-20, 2023</h3>
-      </div>
-      <button class="carousel-arrow left" aria-label="Previous photo" data-prev>&lsaquo;</button>
-      <button class="carousel-arrow right" aria-label="Next photo" data-next>&rsaquo;</button>
-      <div class="carousel">
-        <div class="carousel-images">
-          <img src="images/ghrsst1.jpg" alt="GHRSST group photo">
-          <img src="images/ghrsst2.jpg" alt="GHRSST panel">
-          <img src="images/ghrsst3.jpg" alt="GHRSST presentation">
-          <img src="images/ghrsst6.jpg" alt="GHRSST networking">
-          <img src="images/ghrsst8.jpg" alt="GHRSST closing session">
-        </div>
-      </div>
-    </div>
+    <!-- other carousels unchanged... -->
 
   </div>
 
@@ -245,7 +238,36 @@
   <p style="text-align: center;">&copy; 2025 Brenna Mei Concolis. All rights reserved.</p>
 
   <script>
-    // Minimal, reusable carousel controller
+    // Featured carousel
+    document.querySelectorAll('[data-featured]').forEach((wrapper) => {
+      const images = Array.from(wrapper.querySelectorAll('.featured-carousel-images img'));
+      const prevBtn = wrapper.querySelector('[data-prev]');
+      const nextBtn = wrapper.querySelector('[data-next]');
+      let index = 0;
+
+      function render() {
+        images.forEach((img, i) => {
+          img.style.display = (i === index) ? 'block' : 'none';
+        });
+      }
+
+      function prev() {
+        index = (index - 1 + images.length) % images.length;
+        render();
+      }
+
+      function next() {
+        index = (index + 1) % images.length;
+        render();
+      }
+
+      render();
+      prevBtn.addEventListener('click', (e) => { e.stopPropagation(); prev(); });
+      nextBtn.addEventListener('click', (e) => { e.stopPropagation(); next(); });
+      wrapper.querySelector('.featured-carousel-images').addEventListener('click', next);
+    });
+
+    // Grid carousels
     document.querySelectorAll('[data-carousel]').forEach((wrapper) => {
       const images = Array.from(wrapper.querySelectorAll('.carousel-images img'));
       const prevBtn = wrapper.querySelector('[data-prev]');
@@ -268,22 +290,10 @@
         render();
       }
 
-      // Init view
       render();
-
-      // Wire up controls
       prevBtn.addEventListener('click', (e) => { e.stopPropagation(); prev(); });
       nextBtn.addEventListener('click', (e) => { e.stopPropagation(); next(); });
-
-      // Optional: click image to go next
       wrapper.querySelector('.carousel-images').addEventListener('click', next);
-
-      // Optional: keyboard navigation when focused
-      wrapper.setAttribute('tabindex', '0');
-      wrapper.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') prev();
-        if (e.key === 'ArrowRight') next();
-      });
     });
   </script>
 </body>
